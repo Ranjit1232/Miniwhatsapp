@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini watsapp</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>:::All chat:::</h1>
+    <form method="GET" action="chats/new">
+        <button>New Chat</button>
+    </form>
+    <br>
+
+   <%  for(let chat of chats){  %>
+
+    <div class="Chatt">
+
+         <p>From: <i><%=chat.from %></i> </p>
+         
+          <div class="MSG">
+             <p>MSG: <%= chat.msg %></p>
+             <form method="GET"  action="/chats/<%= chat._id %>/edit">              
+                <button>Edit</button>
+             </form><br>
+                <!-- delete Button   jr promt nko asel tr onsubmit kada and delete ap.js -->
+             <form method="POST"  action="/chats/<%= chat._id %>?_method=DELETE" onsubmit="confirmDelete(event)">              
+                <button>Delete</button>
+             </form><br>
+            <!-- btn creatte for error handlling backend error 
+             <form action="/chats/<%= chat._id %>" method="GET">              
+                <button>Show</button>
+             </form> -->
+
+          </div>
+
+          <p>Receved By: <i><%= chat.to %></i></p>
+        <hr>
+          <p> <%=chat.created_at.toString().split(" ")[4]%></p>
+          <p> <%=chat.created_at.toString().split(" ").slice(0,4).join(" ")%></p>
+    </div>
+<br><br>
+
+<% } %>    
+
+
+<script src="/app.js"></script>
+</body>
+</html>
+
