@@ -4,4 +4,3 @@ function confirmDelete(event) {
   }
 }
 
-//this is home work
