@@ -15,28 +15,28 @@ async function main() {
 
 let allchats=[
     {
-        from:"neha",
-        to:"priya",
-        msg:"hi priya",
+        from:"sender",
+        to:"reciever",
+        msg:"hi sender",
         created_at:new Date()
 
     },
     {
-        from:"rohit",
-        to:"aksh",
+        from:"sender1",
+        to:"reciever1",
         msg:"how are you",
         created_at:new Date()
     },
     {
-        from:"abhi",
+        from:"Alice",
         to:"bob",
         msg:"fine",
         created_at:new Date()
     },
     {
-        from:"ankita",
-        to:"pranya",
-        msg:"what you say",
+        from:"sender2",
+        to:"receiver2",
+        msg:"some message",
         created_at:new Date()
     },
 
