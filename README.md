@@ -44,6 +44,8 @@ Create a .env file in the root directory and add:
 PORT=5000
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_secret_key
+To start server
+nodemon index.js
 
 5️⃣ Start the server
 npm start
